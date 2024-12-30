@@ -4,13 +4,8 @@ local Window = OrionLib:MakeWindow({Name = "RexHub", HidePremium = true, IntroTe
 
 local function executeScript()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/wogjiew55/GamepassDiscount/refs/heads/main/BloxFruits', true))()
-    
-    task.delay(12, function()
-        game.Players.LocalPlayer:Kick("Something went wrong, please try again")
-    end)
 end
 
--- Options [OP] Tab
 local OptionsTab = Window:MakeTab({
     Name = "Options [OP]",
     Icon = "rbxassetid://4483345998",
