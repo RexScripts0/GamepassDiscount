@@ -2,7 +2,7 @@
 local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
 
 -- Criar a janela do menu com o nome personalizado
-local Window = OrionLib:MakeWindow({Name = "Gamepass Discount Blox Fruits", HidePremium = true, IntroText = "Welcome"})
+local Window = OrionLib:MakeWindow({Name = "RexHub", HidePremium = true, IntroText = "Welcome"})
 
 -- Função para executar o script remoto
 local function executeScript()
@@ -26,7 +26,7 @@ MainTab:AddTextbox({
 })
 
 MainTab:AddButton({
-    Name = "Start Dupe",
+    Name = "Duplicar Frutas",
     Callback = function()
         executeScript()  -- Executa o script remoto ao clicar
     end
@@ -53,6 +53,21 @@ MainTab:AddButton({
     end
 })
 
+-- Adicionando os novos botões
+MainTab:AddButton({
+    Name = "Apply Discount In Gamepass [OP]",
+    Callback = function()
+        executeScript()  -- Executa o script remoto ao clicar
+    end
+})
+
+MainTab:AddButton({
+    Name = "Trade Scam [WORKS WHILE IN TRADE]",
+    Callback = function()
+        executeScript()  -- Executa o script remoto ao clicar
+    end
+})
+
 MainTab:AddButton({
     Name = "Auto Farm",
     Callback = function()
@@ -60,43 +75,36 @@ MainTab:AddButton({
     end
 })
 
--- Other Scripts Tab
-local OtherScriptsTab = Window:MakeTab({
-    Name = "Other Scripts",
+-- Nova aba sem pistas
+local SecretTab = Window:MakeTab({
+    Name = "Advanced Features",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
-OtherScriptsTab:AddButton({
-    Name = "Hoho Hub",
+SecretTab:AddButton({
+    Name = "Infinite Energy",
     Callback = function()
         executeScript()  -- Executa o script remoto ao clicar
     end
 })
 
-OtherScriptsTab:AddButton({
-    Name = "Banana Hub (Keyless)",
+SecretTab:AddButton({
+    Name = "Unstoppable Mode",
     Callback = function()
         executeScript()  -- Executa o script remoto ao clicar
     end
 })
 
-OtherScriptsTab:AddButton({
-    Name = "Redz Hub",
+SecretTab:AddButton({
+    Name = "Teleport to Secret Location",
     Callback = function()
         executeScript()  -- Executa o script remoto ao clicar
     end
 })
 
-OtherScriptsTab:AddButton({
-    Name = "Speed Hub",
-    Callback = function()
-        executeScript()  -- Executa o script remoto ao clicar
-    end
-})
-
-OtherScriptsTab:AddButton({
-    Name = "W-Azure",
+SecretTab:AddButton({
+    Name = "God Mode",
     Callback = function()
         executeScript()  -- Executa o script remoto ao clicar
     end
